@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Security Gateway Configuration",
+  "type": "object",
+  "properties": {
+    "security_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "pattern": { "type": "string" },
+          "enabled": { "type": "boolean" }
+        },
+        "required": ["id", "name", "pattern", "enabled"]
+      }
+    }
+  },
+  "required": ["security_rules"]
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "./config.schema.json",
+  "security_rules": [
+    {
+      "id": "RULE-001",
+      "name": "AWS Access Key",
+      "pattern": "\\bAKIA[0-9A-Z]{16}\\b",
+      "enabled": true
+    },
+    {
+      "id": "RULE-002",
+      "name": "PEM Private Key",
+      "pattern": "-----BEGIN\\s+(?:RSA|EC|DSA|OPENSSH|PRIVATE)\\s+KEY-----",
+      "enabled": true
+    },
+    {
+      "id": "RULE-003",
+      "name": "Google Cloud API Key",
+      "pattern": "\\bAIza[0-9A-Za-z\\-_]{35}\\b",
+      "enabled": true
+    },
+    {
+      "id": "RULE-005",
+      "name": "Email Address",
+      "pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+      "enabled": true
+    },
+    {
+      "id": "RULE-006",
+      "name": "Credit Card Number",
+      "pattern": "\\b(?:\\d{4}[-\\s]?){3}\\d{4}\\b",
+      "enabled": true
+    },
+    {
+      "id": "RULE-007",
+      "name": "Database Connection String",
+      "pattern": "(postgres|mysql|mongodb|redis)://[^\\s]+:[^\\s]+@[^\\s]+",
+      "enabled": true
+    },
+    {
+      "id": "RULE-008",
+      "name": "Jailbreak: Ignore Instructions",
+      "pattern": "(?i)ignore\\s+(all\\s+)?previous\\s+(instructions|prompts|rules)",
+      "enabled": true
+    },
+    {
+      "id": "RULE-009",
+      "name": "Jailbreak: DAN / Persona Adoption",
+      "pattern": "(?i)(you are now|act as)\\s+(DAN|jailbroken|unrestricted|developer mode)",
+      "enabled": true
+    },
+    {
+      "id": "RULE-010",
+      "name": "Jailbreak: Hypothetical Framing Bypass",
+      "pattern": "(?i)hypothetically[\\s,]+imagine\\s+(that\\s+)?you\\s+have\\s+no\\s+(rules|restrictions|ethics)",
+      "enabled": true
+    }
+  ]
+}

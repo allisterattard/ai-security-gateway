@@ -78,7 +78,7 @@ If you want to compile the binary locally for production or local testing:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/ai-security-gateway.git](https://github.com/your-username/ai-security-gateway.git)
+   git clone git@github.com:allisterattard/ai-security-gateway.git
    cd ai-security-gateway
    ```
 
